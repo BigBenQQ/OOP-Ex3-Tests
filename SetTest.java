@@ -159,7 +159,7 @@ class SetTest {
             assertTrue(set.delete(Integer.toString(i)));
         }
 
-        assertEquals(0, set.size);
+        assertEquals(0, set.size());
     }
 
     @Test
