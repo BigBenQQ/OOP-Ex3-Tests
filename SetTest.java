@@ -27,15 +27,15 @@ class SetTest {
      */
     @Test
     public void openHashSet_2_big_numbers() {
-        aLotOfStrings_test(new ClosedHashSet());
-        ClosedHashSet o = new ClosedHashSet(1f, 0.5f);
+        aLotOfStrings_test(new OpenHashSet());
+        OpenHashSet o = new OpenHashSet(1f, 0.5f);
         aLotOfStrings_test(o);
         aLotOfStrings_test(o);
-        aLotOfStrings_test(new ClosedHashSet(0.95f, 0.05f));
-        aLotOfStrings_test(new ClosedHashSet(1f, 0f));
-        aLotOfStrings_test(new ClosedHashSet(0.50f, 0.50f));
+        aLotOfStrings_test(new OpenHashSet(0.95f, 0.05f));
+        aLotOfStrings_test(new OpenHashSet(1f, 0f));
+        aLotOfStrings_test(new OpenHashSet(0.50f, 0.50f));
         java.lang.String[] data1 = {};
-        aLotOfStrings_test(new ClosedHashSet(data1));
+        aLotOfStrings_test(new OpenHashSet(data1));
     }
 
     /**
@@ -232,7 +232,7 @@ class SetTest {
             assertTrue(hashSet.contains(Integer.toString(i)), "problem with the string " + i);
 
             // size
-            assertEquals(hashSet.size(), i + 1);
+            assertEquals(i + 1, hashSet.size() );
         }
 
         // deletion
